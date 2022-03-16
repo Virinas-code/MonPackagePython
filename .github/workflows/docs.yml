@@ -20,6 +20,8 @@ jobs:
         cd docs
         make html
         cd ..
+    - name: No jekyll
+      run: touch docs/build/html/.nojekyll
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
